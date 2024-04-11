@@ -1,13 +1,5 @@
 import { Component } from '@angular/core';
-
-interface User {
-  name: string,
-  firstName: string,
-  age: number,
-  quote: string,
-  photo: string,
-  isHidden: boolean
-}
+import { User } from '../models/interfaces/user.interface';
 
 @Component({
   selector: 'app-user-profile',
@@ -23,7 +15,7 @@ export class UserProfileComponent {
     age: 25,
     quote: 'Two beer or not to beer',
     photo: 'https://randomuser.me/api/portraits/lego/2.jpg',
-    isHidden: false
+    isHidden: true
   };
 
   sayHello() : void {

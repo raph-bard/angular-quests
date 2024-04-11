@@ -3,10 +3,10 @@
     <figcaption>
         <h2>Prénom : {{user.firstName}}</h2>
         <h2>Nom : {{user.name}}</h2>
-        <h3 [hidden]="user.isHidden">Age : {{user.age}}</h3>
+        <h3 *ngIf="user.isHidden">Age : {{user.age}}</h3>
         <p>"{{user.quote}}"</p>
     </figcaption>
 </figure>
 <button (click)="sayHello()">Dire bonjour</button>
-<button (click)="toggleHidden()">{{user.isHidden ? "Montrer" : "Cacher"}} l'age</button>
+<button (click)="toggleHidden()">{{user.isHidden ? "Cacher" : "Montrer"}} l'age</button>
 <input type="text" [(ngModel)]="user.quote"/>
