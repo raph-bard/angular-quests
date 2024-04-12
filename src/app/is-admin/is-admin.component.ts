@@ -7,9 +7,11 @@ import { Component } from '@angular/core';
 })
 export class IsAdminComponent {
 
+    view : string = "view";
     isAdmin : boolean = false;
 
     toggleIsAdmin() {
       this.isAdmin = !this.isAdmin;
     }
 }
+
