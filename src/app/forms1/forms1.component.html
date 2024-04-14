@@ -1,0 +1,38 @@
+<div class="container d-flex justify-center">
+    <form #myForm="ngForm" (ngSubmit)="myForm.valid && onSubmit()" class="col-8">
+        <div class="mb-4">
+            Form submitted ? {{myForm.submitted}}
+            Form valid ? {{myForm.valid}}
+            Form invalid ? {{myForm.invalid}}
+        </div>
+
+        <fieldset class="mb-4 d-flex flex-column">
+        <label class="font-5 mb-2" for="title-order">Title:</label>
+        <input class="rounded-1 px-1 py-1" id="title-order" name="title-order" type="text" [(ngModel)]="newOrder.title" #title="ngModel" required minlength="5">
+        </fieldset>
+        <div *ngIf="title.errors" class="mb-4">
+            <span *ngIf="title.errors?.['required']">Le titre est requis</span>
+            <span *ngIf="title.errors?.['minlength']">La longueur minimale doit être supérieure à 5</span>
+        </div>
+
+        <fieldset class="mb-4 d-flex flex-column">
+        <label class="font-5 mb-2" for="quantity-order">Quantité:</label>
+        <input class="rounded-1 px-1 py-1" id="quantity-order" name="quantity-order" type="number" [(ngModel)]="newOrder.quantity" required>
+        </fieldset>
+
+        <fieldset class="mb-4 d-flex flex-column">
+        <label class="font-5 mb-2" for="date-order">Date de commande:</label>
+        <input class="rounded-1 px-1 py-1" id="date-order" name="date-order" type="date" [(ngModel)]="newOrder.date" required>
+        </fieldset>
+
+        <fieldset class="mb-4 d-flex flex-column">
+        <label class="font-5 mb-2" for="contact-order">Contact:</label>
+        <input class="rounded-1 px-1 py-1" id="contact-order" name="contact-order" type="email" [(ngModel)]="newOrder.contact" required email>
+        </fieldset>
+
+        <div class="d-flex justify-center">
+            <button class="p-1 mr-2" type="reset">Restaurer</button>
+            <button class="p-1 ml-2" type="submit">Sauvegarder</button>
+        </div>
+    </form>
+</div>

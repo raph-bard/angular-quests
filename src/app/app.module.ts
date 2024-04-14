@@ -7,13 +7,17 @@ import { AppComponent } from './app.component';
 import { BlockComponent } from './block/block.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { IsAdminComponent } from './is-admin/is-admin.component';
+import { Forms1Component } from './forms1/forms1.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BlockComponent,
     UserProfileComponent,
-    IsAdminComponent
+    IsAdminComponent,
+    Forms1Component,
+    SignUpComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,48 @@
+<div class="container d-flex justify-center">
+    <form #myForm="ngForm" (ngSubmit)="onSubmit()" class="col-8">
+        <div class="mb-4">
+            Form submitted ? {{myForm.submitted}}
+            Form valid ? {{myForm.valid}}
+            Form invalid ? {{myForm.invalid}}
+        </div>
+
+        <fieldset class="mb-4 d-flex flex-column">
+            <label class="font-5 mb-2" for="user-email">Email:</label>
+            <input class="rounded-1 px-1 py-1" id="user-email" name="user-email" type="email" [(ngModel)]="user.email" #email="ngModel" required email>
+            <div *ngIf="formSubmitted && email.errors" class="mt-2 mb-4">
+                <span *ngIf="email.errors?.['required']">Le mail est requis</span>
+            </div>
+        </fieldset>
+
+        <fieldset class="mb-4 d-flex flex-column">
+            <label class="font-5 mb-2" for="user-firstname">Prénom:</label>
+            <input class="rounded-1 px-1 py-1" id="user-firstname" name="user-firstname" type="text" [(ngModel)]="user.firstname" #firstname="ngModel" required minlength="3">
+            <div *ngIf="formSubmitted && firstname.errors" class="mt-2 mb-4">
+                <span *ngIf="firstname.errors?.['required']">Le prénom est requis</span>
+                <span *ngIf="firstname.errors?.['minlength']">La longueur minimale doit être supérieure à 3</span>
+            </div>
+        </fieldset>
+
+        <fieldset class="mb-4 d-flex flex-column">
+            <label class="font-5 mb-2" for="user-lastname">Nom de famille:</label>
+            <input class="rounded-1 px-1 py-1" id="user-lastname" name="user-lastname" type="text" [(ngModel)]="user.lastname" #lastname="ngModel" required  minlength="3">
+            <div *ngIf="formSubmitted && lastname.errors" class="mt-2 mb-4">
+                <span *ngIf="lastname.errors?.['required']">Le nom est requis</span>
+                <span *ngIf="lastname.errors?.['minlength']">La longueur minimale doit être supérieure à 3</span>
+            </div>
+        </fieldset>
+
+        <fieldset class="mb-4 d-flex flex-column">
+            <label class="font-5 mb-2" for="contact-order">Mot de passe :</label>
+            <input class="rounded-1 px-1 py-1" id="contact-order" name="contact-order" type="text" [(ngModel)]="user.password" #password="ngModel" required>
+            <div *ngIf="formSubmitted && password.errors" class="mt-2 mb-4">
+                <span *ngIf="password.errors?.['required']">Le mot de passe est requis</span>
+            </div>
+        </fieldset>
+
+        <div class="d-flex justify-center">
+            <button class="p-1 mr-2" type="reset">Restaurer</button>
+            <button class="p-1 ml-2" type="submit">Sauvegarder</button>
+        </div>
+    </form>
+</div>
