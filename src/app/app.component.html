@@ -1,10 +1,27 @@
 <div class="container">
-    <ul class="d-flex justify-center my-12">
-        <li class="mr-10"><a class="text-5 text-uppercase" [routerLink]="['/sign-up']">Sign up</a></li>
-        <li class="mr-10"><a class="text-5 text-uppercase" [routerLink]="['/forms-1']">form-1</a></li>
-        <li class="mr-10"><a class="text-5 text-uppercase" [routerLink]="['/user-profile']">user-profile</a></li>
-        <li ><a class="text-5 text-uppercase" [routerLink]="['/is-admin']">is-admin</a></li>
-    </ul>
+  <ul class="d-flex justify-center my-12">
+    <li class="mr-12">
+      <a class="text-5 text-uppercase" [routerLink]="['/sign-up']">Sign up</a>
+    </li>
+    <li class="mr-10">
+      <a class="text-5 text-uppercase" [routerLink]="['/forms-1']">form-1</a>
+    </li>
+    <li class="mr-10">
+      <a class="text-5 text-uppercase" [routerLink]="['/user-profile']"
+        >user-profile</a
+      >
+    </li>
+    <li>
+      <a class="text-5 text-uppercase" [routerLink]="['/is-admin']">is-admin</a>
+    </li>
+  </ul>
 </div>
-
-<router-outlet></router-outlet>
+<!-- <div class="container">
+  @for(developer of developersList; track $index) {
+  <app-developper class="col-6" [developer]="developer"></app-developper>
+  }
+</div> -->
+<div class="container">
+    <router-outlet />
+</div>
+<app-footer />

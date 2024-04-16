@@ -1,0 +1,16 @@
+<div>
+  <h2 class="mb-4">Développer</h2>
+  <h3 class="mb-2">Informations</h3>
+  <ul>
+    <li>{{ developer.lastName }}</li>
+    <li>{{ developer.firstName }}</li>
+    <li>{{ developer.age }}</li>
+    <li>{{ developer.gender }}</li>
+    <li>{{ developer.age }}</li>
+    <li>{{ developer.gender }}</li>
+  </ul>
+  <h3>Compétences :</h3>
+  @for(skill of developer.skills; track $index) {
+  <app-skill [skill]="skill"></app-skill>
+  }
+</div>

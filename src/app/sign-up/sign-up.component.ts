@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { NgModel } from '@angular/forms';
 import { User } from '../models/user.model';
 
 @Component({
   selector: 'app-sign-up',
   templateUrl: './sign-up.component.html',
-  styleUrl: './sign-up.component.css',
+  styleUrls: ['./sign-up.component.css'],
 })
 export class SignUpComponent {
 
@@ -20,6 +21,5 @@ export class SignUpComponent {
   onSubmit(): void {
     this.formSubmitted = true;
     console.log('Envoyé !,', this.user);
-    console.log("formSubmitted: ", this.formSubmitted);
   }
 }

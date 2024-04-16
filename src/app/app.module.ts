@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, FormBuilder, Validators } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -9,6 +9,10 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
 import { IsAdminComponent } from './is-admin/is-admin.component';
 import { Forms1Component } from './forms1/forms1.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
+import { DevelopperComponent } from './developper/developper.component';
+import { SkillComponent } from './skill/skill.component';
+import { Error404Component } from './error-404/error-404.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -17,12 +21,16 @@ import { SignUpComponent } from './sign-up/sign-up.component';
     UserProfileComponent,
     IsAdminComponent,
     Forms1Component,
-    SignUpComponent
+    SignUpComponent,
+    DevelopperComponent,
+    SkillComponent,
+    Error404Component,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

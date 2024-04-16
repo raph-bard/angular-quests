@@ -18,4 +18,5 @@ export class Forms1Component {
     onSubmit(): void {
       console.log("Formulaire envoyé !", this.newOrder)
     }
+    
 }
