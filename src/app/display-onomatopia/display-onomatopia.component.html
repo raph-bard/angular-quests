@@ -1,0 +1,6 @@
+<ul>
+    @for (onomatopia of onomatopoeiaList; track $index) {
+        <li>{{onomatopia}}</li>
+    }
+</ul>
+<app-create-onomatopia (onomatopia)="displayOnomatopia($event)"></app-create-onomatopia>

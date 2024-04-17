@@ -11,8 +11,16 @@
         >user-profile</a
       >
     </li>
-    <li>
+    <li class="mr-10">
       <a class="text-5 text-uppercase" [routerLink]="['/is-admin']">is-admin</a>
+    </li>
+    <li class="mr-10">
+      <a class="text-5 text-uppercase" [routerLink]="['/display-onomatopia']">Onomatopia</a>
+    </li>
+    <li>
+      <a class="text-5 text-uppercase" [routerLink]="['/command-form']"
+        >command-form</a
+      >
     </li>
   </ul>
 </div>
@@ -22,6 +30,6 @@
   }
 </div> -->
 <div class="container">
-    <router-outlet />
+  <router-outlet />
 </div>
 <app-footer />

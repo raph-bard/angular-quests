@@ -13,6 +13,10 @@ import { DevelopperComponent } from './developper/developper.component';
 import { SkillComponent } from './skill/skill.component';
 import { Error404Component } from './error-404/error-404.component';
 import { FooterComponent } from './footer/footer.component';
+import { CommandFormComponent } from './command-form/command-form.component';
+import { CreateOnomatopiaComponent } from './create-onomatopia/create-onomatopia.component';
+import { DisplayOnomatopiaComponent } from './display-onomatopia/display-onomatopia.component';
+import { ButtonComponent } from './button/button.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +29,11 @@ import { FooterComponent } from './footer/footer.component';
     DevelopperComponent,
     SkillComponent,
     Error404Component,
-    FooterComponent
+    FooterComponent,
+    CommandFormComponent,
+    CreateOnomatopiaComponent,
+    DisplayOnomatopiaComponent,
+    ButtonComponent
   ],
   imports: [
     BrowserModule,

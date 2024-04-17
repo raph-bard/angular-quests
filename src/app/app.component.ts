@@ -35,6 +35,5 @@ export class AppComponent {
     bio: "Aigrie de père en fille",
     skills: [this.javascript]  
   }
-  developersList = [this.victor,this.aurore]
 
 }

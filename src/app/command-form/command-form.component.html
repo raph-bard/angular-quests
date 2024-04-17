@@ -1,0 +1,30 @@
+<form (ngSubmit)="onSubmit()" action="/submit-your-form-handler" method="POST">
+  <fieldset>
+    <legend>Détails de la commande</legend>
+    <label for="titre">Titre:</label>
+    <input
+      type="text"
+      id="titre"
+      name="titre"
+      #titleErr
+      required
+      minlength="3"
+    />
+  </fieldset>
+  <fieldset>
+    <label for="quantite">Quantité:</label>
+    <input type="number" id="quantite" name="quantite" #quantityErr required />
+  </fieldset>
+  <fieldset>
+    <label for="date">Date:</label>
+    <input type="date" id="date" name="date" required />
+  </fieldset>
+  <fieldset>
+    <label for="contact">Contact:</label>
+    <input type="text" id="contact" name="contact" required />
+  </fieldset>
+  <fieldset>
+    <button type="reset">Effacer</button>
+    <button type="submit">Soumettre</button>
+  </fieldset>
+</form>

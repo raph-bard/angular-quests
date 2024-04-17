@@ -1,0 +1,4 @@
+<form #onomatopiaForm="ngForm" (ngSubmit)="sendOnomatopiaToParent()">
+    <input type="text" name="newOnomatopia" id="newOnomatopia" [(ngModel)]="newOnomatopia" #onomatopiaInput="ngModel" value="Test" placeholder="Nouvelle onomatopia">
+    <button type="submit">Submit</button>
+</form>
